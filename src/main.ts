@@ -1,31 +1,9 @@
-type Supplies = {
-    cups: number;
-    lemons: number;
-    sugar: number;
-    ice: number;
-};
+import { LemonadeStand } from "./lemonadeStand";
 
-class LemonadeStand {
-    cash: number;
-    inventory: Supplies;
-    recipe: Supplies;
-    pricePerCup: number;
-
-   constructor(startingCash: number){
-        this.cash = startingCash;
-        this.inventory = { cups: 0, lemons: 0, sugar: 0, ice: 0};
-        this.recipe = {cups: 1, lemons: 0.5, sugar: 0.2, ice: 1};      // recipe of lemonade
-        this.pricePerCup = 2;                                          // price of lemonade
-    }
-
-    canMakeCup(): boolean {
-        return this.inventory.cups&&this.inventory.lemons&&this.inventory.sugar&&this.inventory.ice;
-    }
-}
-
-
-//test
-//TODO delete
+// quick test
 const stand = new LemonadeStand(20);
+console.log(stand.canMakeCup());                                             // false
+console.log(stand.buy({ cups: 10, lemons: 5, sugar: 5, ice: 20 }, 8));       // true
+console.log(stand.buy({ cups: 1, lemons: 1, sugar: 1, ice: 1 }, 100));      // false
+console.log(stand.sellCups(8));                                              // 5, ran out of lemons
 console.log(stand);
-console.log(stand.canMakeCup());
