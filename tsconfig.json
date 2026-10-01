@@ -18,5 +18,8 @@
 
 		// Disallow features that require cross-file awareness
 		"isolatedModules": true,
+
+		// TypeScript 6+ no longer loads @types/* automatically
+		"types": ["node"],
 	},
 }
