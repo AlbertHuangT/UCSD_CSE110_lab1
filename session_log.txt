@@ -1,0 +1,208 @@
+Welcome to Lemonade Stand!
+You start with $20.00. Each cup uses 1 cups, 1 lemons, 1 sugar, 3 ice
+and sells for $2.00.
+
+========== Day 1 ==========
+Weather: 52°F, cool and cloudy
+Cash: $20.00
+Inventory: 0 cups, 0 lemons, 0 sugar, 0 ice
+
+Shopping list (today's prices, cash: $20.00)
+  [ ] cups       - x $0.04
+  [ ] lemons     - x $0.37
+  [ ] sugar      - x $0.12
+  [ ] ice        - x $0.01
+  Total so far: $0.00 (cash left: $20.00)
+How many cups to buy? 30
+
+Shopping list (today's prices, cash: $20.00)
+  [x] cups      30 x $0.04 = $1.20
+  [ ] lemons     - x $0.37
+  [ ] sugar      - x $0.12
+  [ ] ice        - x $0.01
+  Total so far: $1.20 (cash left: $18.80)
+How many lemons to buy? 15
+
+Shopping list (today's prices, cash: $20.00)
+  [x] cups      30 x $0.04 = $1.20
+  [x] lemons    15 x $0.37 = $5.55
+  [ ] sugar      - x $0.12
+  [ ] ice        - x $0.01
+  Total so far: $6.75 (cash left: $13.25)
+How many sugar to buy? abc
+Please enter a whole number (0 or more).
+How many sugar to buy? 15
+
+Shopping list (today's prices, cash: $20.00)
+  [x] cups      30 x $0.04 = $1.20
+  [x] lemons    15 x $0.37 = $5.55
+  [x] sugar     15 x $0.12 = $1.80
+  [ ] ice        - x $0.01
+  Total so far: $8.55 (cash left: $11.45)
+How many ice to buy? 45
+
+Shopping list (today's prices, cash: $20.00)
+  [x] cups      30 x $0.04 = $1.20
+  [x] lemons    15 x $0.37 = $5.55
+  [x] sugar     15 x $0.12 = $1.80
+  [x] ice       45 x $0.01 = $0.45
+  Total so far: $9.00 (cash left: $11.00)
+Buy all this for $9.00? (y/n) n
+OK, let's start over.
+
+Shopping list (today's prices, cash: $20.00)
+  [ ] cups       - x $0.04
+  [ ] lemons     - x $0.37
+  [ ] sugar      - x $0.12
+  [ ] ice        - x $0.01
+  Total so far: $0.00 (cash left: $20.00)
+How many cups to buy? 30
+
+Shopping list (today's prices, cash: $20.00)
+  [x] cups      30 x $0.04 = $1.20
+  [ ] lemons     - x $0.37
+  [ ] sugar      - x $0.12
+  [ ] ice        - x $0.01
+  Total so far: $1.20 (cash left: $18.80)
+How many lemons to buy? 15
+
+Shopping list (today's prices, cash: $20.00)
+  [x] cups      30 x $0.04 = $1.20
+  [x] lemons    15 x $0.37 = $5.55
+  [ ] sugar      - x $0.12
+  [ ] ice        - x $0.01
+  Total so far: $6.75 (cash left: $13.25)
+How many sugar to buy? 15
+
+Shopping list (today's prices, cash: $20.00)
+  [x] cups      30 x $0.04 = $1.20
+  [x] lemons    15 x $0.37 = $5.55
+  [x] sugar     15 x $0.12 = $1.80
+  [ ] ice        - x $0.01
+  Total so far: $8.55 (cash left: $11.45)
+How many ice to buy? 45
+
+Shopping list (today's prices, cash: $20.00)
+  [x] cups      30 x $0.04 = $1.20
+  [x] lemons    15 x $0.37 = $5.55
+  [x] sugar     15 x $0.12 = $1.80
+  [x] ice       45 x $0.01 = $0.45
+  Total so far: $9.00 (cash left: $11.00)
+Buy all this for $9.00? (y/n) y
+Bought for $9.00.
+
+--- End of Day 1 ---
+Customers who wanted lemonade: 14
+Cups sold: 14
+Inventory left: 16 cups, 1 lemons, 1 sugar, 3 ice
+Cash: $39.00 (+$19.00 today)
+Play another day? (y/n) y
+
+========== Day 2 ==========
+Weather: 69°F, mild
+Cash: $39.00
+Inventory: 16 cups, 1 lemons, 1 sugar, 3 ice
+
+Shopping list (today's prices, cash: $39.00)
+  [ ] cups       - x $0.03
+  [ ] lemons     - x $0.39
+  [ ] sugar      - x $0.08
+  [ ] ice        - x $0.02
+  Total so far: $0.00 (cash left: $39.00)
+How many cups to buy? 10
+
+Shopping list (today's prices, cash: $39.00)
+  [x] cups      10 x $0.03 = $0.30
+  [ ] lemons     - x $0.39
+  [ ] sugar      - x $0.08
+  [ ] ice        - x $0.02
+  Total so far: $0.30 (cash left: $38.70)
+How many lemons to buy? 25
+
+Shopping list (today's prices, cash: $39.00)
+  [x] cups      10 x $0.03 = $0.30
+  [x] lemons    25 x $0.39 = $9.75
+  [ ] sugar      - x $0.08
+  [ ] ice        - x $0.02
+  Total so far: $10.05 (cash left: $28.95)
+How many sugar to buy? 25
+
+Shopping list (today's prices, cash: $39.00)
+  [x] cups      10 x $0.03 = $0.30
+  [x] lemons    25 x $0.39 = $9.75
+  [x] sugar     25 x $0.08 = $2.00
+  [ ] ice        - x $0.02
+  Total so far: $12.05 (cash left: $26.95)
+How many ice to buy? 75
+
+Shopping list (today's prices, cash: $39.00)
+  [x] cups      10 x $0.03 = $0.30
+  [x] lemons    25 x $0.39 = $9.75
+  [x] sugar     25 x $0.08 = $2.00
+  [x] ice       75 x $0.02 = $1.50
+  Total so far: $13.55 (cash left: $25.45)
+Buy all this for $13.55? (y/n) y
+Bought for $13.55.
+
+--- End of Day 2 ---
+Customers who wanted lemonade: 22
+Cups sold: 22
+Inventory left: 4 cups, 4 lemons, 4 sugar, 12 ice
+Cash: $69.45 (+$30.45 today)
+Play another day? (y/n) y
+
+========== Day 3 ==========
+Weather: 73°F, mild
+Cash: $69.45
+Inventory: 4 cups, 4 lemons, 4 sugar, 12 ice
+
+Shopping list (today's prices, cash: $69.45)
+  [ ] cups       - x $0.06
+  [ ] lemons     - x $0.35
+  [ ] sugar      - x $0.10
+  [ ] ice        - x $0.02
+  Total so far: $0.00 (cash left: $69.45)
+How many cups to buy? 0
+
+Shopping list (today's prices, cash: $69.45)
+  [x] cups       0 x $0.06 = $0.00
+  [ ] lemons     - x $0.35
+  [ ] sugar      - x $0.10
+  [ ] ice        - x $0.02
+  Total so far: $0.00 (cash left: $69.45)
+How many lemons to buy? 20
+
+Shopping list (today's prices, cash: $69.45)
+  [x] cups       0 x $0.06 = $0.00
+  [x] lemons    20 x $0.35 = $7.00
+  [ ] sugar      - x $0.10
+  [ ] ice        - x $0.02
+  Total so far: $7.00 (cash left: $62.45)
+How many sugar to buy? 20
+
+Shopping list (today's prices, cash: $69.45)
+  [x] cups       0 x $0.06 = $0.00
+  [x] lemons    20 x $0.35 = $7.00
+  [x] sugar     20 x $0.10 = $2.00
+  [ ] ice        - x $0.02
+  Total so far: $9.00 (cash left: $60.45)
+How many ice to buy? 60
+
+Shopping list (today's prices, cash: $69.45)
+  [x] cups       0 x $0.06 = $0.00
+  [x] lemons    20 x $0.35 = $7.00
+  [x] sugar     20 x $0.10 = $2.00
+  [x] ice       60 x $0.02 = $1.20
+  Total so far: $10.20 (cash left: $59.25)
+Buy all this for $10.20? (y/n) y
+Bought for $10.20.
+
+--- End of Day 3 ---
+Customers who wanted lemonade: 25
+Cups sold: 4 (ran out of supplies!)
+Inventory left: 0 cups, 20 lemons, 20 sugar, 60 ice
+Cash: $67.25 (-$2.20 today)
+Play another day? (y/n) n
+
+Game over after 3 days. Final cash: $67.25
+
