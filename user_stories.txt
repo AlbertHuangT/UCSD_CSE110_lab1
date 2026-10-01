@@ -7,3 +7,10 @@ As a player, I want each cup sold to use up supplies according to a fixed recipe
 As a player, I want to see how many cups I sold, how much inventory is left, and my current cash at the end of each day so that I know how well I did and can adjust my plan.
 
 As a player, I want the game to proceed one day at a time so that I can keep playing and try to grow my cash over many days.
+
+---
+Nice-to-have:
+
+As a player, I want to review my whole order and its total cost before confirming, and start over if I change my mind, so that I don't make a purchase I regret or can't afford.
+
+As a player, I want to see a shopping list that marks which supplies I have already entered and which I haven't, so that I can plan the rest of my order.
