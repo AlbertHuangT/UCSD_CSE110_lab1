@@ -28,7 +28,7 @@ export class Game {
             keepPlaying = await this.askYesNo("Play another day? (y/n) ");
         }
 
-        console.log(`\nGame over after ${this.dayNumber} days. Final cash: ${money(this.stand.cash)}`);
+        console.log(`\nGame over after ${this.dayNumber} day${this.dayNumber === 1 ? "" : "s"}. Final cash: ${money(this.stand.cash)}`);
         this.rl.close();
     }
 
@@ -40,10 +40,6 @@ export class Game {
         console.log(`Weather: ${day.temperature}°F, ${day.weather()}`);
         console.log(`Cash: ${money(this.stand.cash)}`);
         console.log(`Inventory: ${formatSupplies(this.stand.inventory)}`);
-        console.log("Today's prices:");
-        for (const name of SUPPLY_NAMES) {
-            console.log(`  ${name.padEnd(7)} ${money(day.prices[name])} each`);
-        }
 
         await this.shop(day);
 
@@ -57,21 +53,48 @@ export class Game {
         console.log(`Cash: ${money(this.stand.cash)} (${signedMoney(roundCents(this.stand.cash - cashAtStart))} today)`);
     }
 
-    // keep asking until the player enters an order they can afford
+    // keep asking until the player confirms an order they can afford
     async shop(day: Day): Promise<void> {
         while (true) {
             const order: Supplies = { cups: 0, lemons: 0, sugar: 0, ice: 0 };
-            for (const name of SUPPLY_NAMES) {
+            for (let i = 0; i < SUPPLY_NAMES.length; i++) {
+                this.printShoppingList(day, order, i);
+                const name = SUPPLY_NAMES[i];
                 order[name] = await this.askNumber(`How many ${name} to buy? `);
             }
+            this.printShoppingList(day, order, SUPPLY_NAMES.length);
 
+            // nothing is bought until the player says yes, so saying no is the "undo"
             const cost = day.costOf(order);
-            if (this.stand.buy(order, cost)) {
-                console.log(`Bought for ${money(cost)}.`);
-                return;
+            if (!this.stand.canAfford(cost)) {
+                console.log(`That costs ${money(cost)} but you only have ${money(this.stand.cash)}. Let's start over.`);
+                continue;
             }
-            console.log(`That costs ${money(cost)} but you only have ${money(this.stand.cash)}. Try again.`);
+            if (!(await this.askYesNo(`Buy all this for ${money(cost)}? (y/n) `))) {
+                console.log("OK, let's start over.");
+                continue;
+            }
+            this.stand.buy(order, cost);
+            console.log(`Bought for ${money(cost)}.`);
+            return;
         }
+    }
+
+    // [x] = already entered, [ ] = not entered yet
+    printShoppingList(day: Day, order: Supplies, enteredCount: number): void {
+        console.log(`\nShopping list (today's prices, cash: ${money(this.stand.cash)})`);
+        for (let i = 0; i < SUPPLY_NAMES.length; i++) {
+            const name = SUPPLY_NAMES[i];
+            const price = money(day.prices[name]);
+            if (i < enteredCount) {
+                const subtotal = money(roundCents(order[name] * day.prices[name]));
+                console.log(`  [x] ${name.padEnd(7)} ${String(order[name]).padStart(4)} x ${price} = ${subtotal}`);
+            } else {
+                console.log(`  [ ] ${name.padEnd(7)}    - x ${price}`);
+            }
+        }
+        const total = day.costOf(order);
+        console.log(`  Total so far: ${money(total)} (cash left: ${money(roundCents(this.stand.cash - total))})`);
     }
 
     async askNumber(question: string): Promise<number> {
@@ -100,11 +123,11 @@ export class Game {
 }
 
 function money(amount: number): string {
-    return `$${amount.toFixed(2)}`;
+    return amount < 0 ? `-$${(-amount).toFixed(2)}` : `$${amount.toFixed(2)}`;
 }
 
 function signedMoney(amount: number): string {
-    return amount < 0 ? `-${money(-amount)}` : `+${money(amount)}`;
+    return amount < 0 ? money(amount) : `+${money(amount)}`;
 }
 
 function formatSupplies(s: Supplies): string {
