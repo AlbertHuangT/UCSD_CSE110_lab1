@@ -1,0 +1,9 @@
+As a player, I want to see the weather and today's supply prices (cups, lemons, sugar, ice) at the start of each day so that I can decide how much to buy.
+
+As a player, I want to enter how many of each supply to buy at today's prices so that I can stock my stand within my cash budget.
+
+As a player, I want each cup sold to use up supplies according to a fixed recipe that stays the same across days so that I can estimate how much inventory I need.
+
+As a player, I want to see how many cups I sold, how much inventory is left, and my current cash at the end of each day so that I know how well I did and can adjust my plan.
+
+As a player, I want the game to proceed one day at a time so that I can keep playing and try to grow my cash over many days.
